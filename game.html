@@ -2,34 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Matching Game</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"> </script>
-    <script src="game.js"> </script>
 </head>
 <body>
-    <div id="overlay"> </div>
-    <div style="height: 8px;"></div>
-    <div id="title">
-        <span id="logo">MEMORY MATCHING GAME</span>
+    <div id="overlay"></div>
+
+    <div id="game-container">
+        <div id="title">MEMORY MATCHING GAME</div>
+        
+        <div id="user-info">
+            Welcome, <span id="username"></span>
+            <button id="logout-btn" onclick="logout()">Logout</button>
+        </div>
+        
+        <div id="score-container">
+            <div class="score-column">
+                <div id="moves"></div>
+                <div>Least Moves: <span id="least-moves"></span></div>
+            </div>
+            <div class="score-column">
+                <div id="time"></div>
+                <div>Least Time: <span id="least-time"></span></div>
+            </div>
+        </div>
+        
+        <table></table>
     </div>
 
-    <div id="title" style="height: 40px;">
-        <span id="moves"></span>
-        <span id="time"></span>
-    </div>
-
-    <div id="user-info"></div>
-        Welcome, <span id="username"></span>
-        <button id="logout-btn" onclick="logout()">Logout</button>
-    </div>
-
-    <div id="high-score">High Score: <span id="best-score">N/A</span></div>
-
-    <center>
-        <table cellspacing="0"></table>
-    </center>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="game.js"></script>
 </body>
 </html>
