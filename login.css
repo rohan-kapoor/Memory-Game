@@ -45,6 +45,7 @@ button {
 }
 button:hover {
     background-color: #45a049;
+    color: white;
 }
 .switch-form {
     margin-top: 1rem;

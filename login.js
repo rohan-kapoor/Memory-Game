@@ -10,8 +10,8 @@ function switchForm(formType) {
     }
 }
 
+// Using XOR encryption
 function encryptPassword(password) {
-    // This is a simple XOR encryption. Not secure for production use!
     const key = 'secretkey';
     let encrypted = '';
     for (let i = 0; i < password.length; i++) {
